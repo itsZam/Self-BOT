@@ -44,7 +44,7 @@ Thanks SELURUH CREATOR BOT YANG ADA DI GRUP BOT WE A
                     -MRG3P5
                     -NAFIZ
                     -Nabil
-                    -Niko
+                    -Rahmat
                     -DAN SELURUH PENYEDIA WEB API
 
    Nb:Premium Command tau lah harus kemana
