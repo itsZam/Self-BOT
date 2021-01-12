@@ -1321,6 +1321,135 @@ ${desc}`)
                 await zama.sendImage(self, nhsh2[i].data, 'thumbserc.jpg', '', id)
                 }
             break
+         case prefix+'goldplay':
+          await zama.reply(self, mess.wait, id) 
+          var playbut = body.slice(10)
+          const gold = await get.get(`https://api.zeks.xyz/api/gplaybutton?text=${playbut}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, gold.result, 'gold.jpg','Nihh', id)
+    break
+    case prefix+'silverplay':
+          await zama.reply(self, mess.wait, id) 
+          var playbut = body.slice(11)
+          const silver = await get.get(`http://api.zeks.xyz/api/splaybutton?text=${playbut}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, silver.result, 'silver.jpg','Nihh', id)
+    break
+     case prefix+'graffity':
+          await zama.reply(self, mess.wait, id) 
+          var graffity = body.slice(10)
+          const grafiti = await get.get(`http://api.zeks.xyz/api/grafiti?text=${graffity}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, grafiti.result, 'grafiti.jpg','Nihh', id)
+          break
+     case prefix+'leaves':
+          await zama.reply(self, mess.wait, id) 
+          var leaves1 = body.slice(8)
+          const leaves2 = await get.get(`http://api.zeks.xyz/api/leavest?text=${leaves1}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, leaves2.result, 'leaves2.jpg','Nihh', id)
+          break
+        case prefix+'tlight':
+          await zama.reply(self, mess.wait, id) 
+          var tlight1 = body.slice(8)
+          const tlight2 = await get.get(`http://api.zeks.xyz/api/tlight?text=${tlight1}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, tlight2.result, 'tlight2.jpg','Nihh', id)
+          break
+        case prefix+'crismes':
+          await zama.reply(self, mess.wait, id) 
+          var crismes1 = body.slice(8)
+          const crismes2 = await get.get(`http://api.zeks.xyz/api/crismes?text=${crismes1}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, crismes2.result, 'crismes2.jpg','Nihh', id)
+          break
+         case prefix+'goldplay':
+          await zama.reply(self, mess.wait, id) 
+          var playbut = body.slice(10)
+          const gold = await get.get(`https://api.zeks.xyz/api/gplaybutton?text=${playbut}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, gold.result, 'gold.jpg','Nihh', id)
+    break
+    case prefix+'silverplay':
+          await zama.reply(self, mess.wait, id) 
+          var playbut = body.slice(11)
+          const silver = await get.get(`http://api.zeks.xyz/api/splaybutton?text=${playbut}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, silver.result, 'silver.jpg','Nihh', id)
+    break
+     case prefix+'graffity':
+          await rahmat.reply(self, mess.wait, id) 
+          var graffity = body.slice(10)
+          const grafiti = await get.get(`http://api.zeks.xyz/api/grafiti?text=${graffity}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, grafiti.result, 'grafiti.jpg','Nihh', id)
+          break
+     case prefix+'leaves':
+          await zama.reply(self, mess.wait, id) 
+          var leaves1 = body.slice(8)
+          const leaves2 = await get.get(`http://api.zeks.xyz/api/leavest?text=${leaves1}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, leaves2.result, 'leaves2.jpg','Nihh', id)
+          break
+        case prefix+'tlight':
+          await zama.reply(self, mess.wait, id) 
+          var tlight1 = body.slice(8)
+          const tlight2 = await get.get(`http://api.zeks.xyz/api/tlight?text=${tlight1}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, tlight2.result, 'tlight2.jpg','Nihh', id)
+          break
+        case prefix+'crismes':
+          await zama.reply(self, mess.wait, id) 
+          var crismes1 = body.slice(8)
+          const crismes2 = await get.get(`http://api.zeks.xyz/api/crismes?text=${crismes1}&apikey=apivinz`).json()
+          zama.sendFileFromUrl(self, crismes2.result, 'crismes2.jpg','Nihh', id)
+          break
+         case prefix+'stickerhentai': //lupa dari siapa
+            case prefix+'shentai':  
+            case prefix+'stikerhentai':
+            if(isReg(obj)) return
+                 zama.reply(self, mess.wait, id)
+                 const hentayo = ['http://i4.xxxhentaigallery.com/photos/204/747-part.jpg','http://i1.xxxhentaigallery.com/photos/193/809__8.jpg','http://i2.xxxhentaigallery.com/photos/165/356_Kidmo.jpg','http://i4.xxxhentaigallery.com/photos/192/811___.jpg','http://i2.xxxhentaigallery.com/photos/179/075_.jpg','http://i1.xxxhentaigallery.com/photos/174/070_Zeroshiki.jpg','http://i1.xxxhentaigallery.com/photos/132/678__Captain_.jpg']
+                 let hentayok = hentayo[Math.floor(Math.random() * hentayo.length)]
+                 zama.sendStickerfromUrl(self, hentayok, '', 'Neh...', id)
+                 breakcase prefix+'phcomment':
+                
+                 const ph = body.slice(10)
+                const usernamePh = ph.split('|')[0]
+                const commentPh = ph.split('|')[1]
+                const ppPhRaw = await rahmat.getProfilePicFromServer(sender.id)
+                if (ppPhRaw === undefined) {
+                    var ppPh = errorImg
+                } else {
+                    var ppPh = ppPhRaw
+                }
+                const dataPpPh = await bent('buffer')(ppPh)
+                const linkPpPh = await uploadImages(dataPpPh, `${sender.id}_ph`)
+                await rahmat.reply(from, ind.wait(), id)
+                const preproccessPh = await axios.get(`https://nekobot.xyz/api/imagegen?type=phcomment&image=${linkPpPh}&text=${commentPh}&username=${usernamePh}`)
+                await rahmat.sendFileFromUrl(from, preproccessPh.data.message, 'ph.jpg', '', id)
+                console.log('Success creating image!')
+            break
+          case prefix+'phcomment': //by: bocchi
+                
+                 const ph = body.slice(10)
+                const usernamePh = ph.split('|')[0]
+                const commentPh = ph.split('|')[1]
+                const ppPhRaw = await rahmat.getProfilePicFromServer(sender.id)
+                if (ppPhRaw === undefined) {
+                    var ppPh = errorImg
+                } else {
+                    var ppPh = ppPhRaw
+                }
+                const dataPpPh = await bent('buffer')(ppPh)
+                const linkPpPh = await uploadImages(dataPpPh, `${sender.id}_ph`)
+                await zama.reply(from, ind.wait(), id)
+                const preproccessPh = await axios.get(`https://nekobot.xyz/api/imagegen?type=phcomment&image=${linkPpPh}&text=${commentPh}&username=${usernamePh}`)
+                await zama.sendFileFromUrl(from, preproccessPh.data.message, 'ph.jpg', '', id)
+                console.log('Success creating image!')
+            break
+         case `${prefix}loli2`:
+//return rahmat.reply(self, `Fitur Sedang Dalam Perbaikan!`, id)
+            if(isReg(obj)) return
+            if(cekumur(cekage)) return
+                //if (!isVipUser) return rahmat.reply(self, '*Fitur Ini Khusus VIP!*\n _Daftar VIP Hanya 10k/Bulan_\n\n*Mau Daftar VIP?*\nChat Owner BOT\n_wa.me/6285811955968 ', id)
+            //if (!isGroupMsg) return rahmat.reply(self, 'Perintah ini hanya bisa di gunakan dalam group!', id)
+            if (isLimit(serial)) return zama.reply(self, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis/nJika Ingin Isi Ulang Chat Owner!/nKetik %limit Untuk Mengecek Kuota Limit Kamu`, id)
+            const loli = fs.readFileSync('./lib/loli.json')
+            const loliJson = JSON.parse(loli)
+            const loliIndex = Math.floor(Math.random() * loliJson.length)
+            const loliKey = loliJson[loliIndex]
+            zama.sendFileFromUrl(self, loliKey.image, 'loli.jpg', loliKey.teks)
+            break
         case `${prefix}loli`:
         if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
             if (!isGroupMsg) return zama.reply(self, `Perintah ini hanya bisa di gunakan dalam group!`, id)
