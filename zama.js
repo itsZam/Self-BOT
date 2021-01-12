@@ -1321,6 +1321,78 @@ ${desc}`)
                 await zama.sendImage(self, nhsh2[i].data, 'thumbserc.jpg', '', id)
                 }
             break
+         case prefix+'goldplay':
+          await rahmat.reply(self, mess.wait, id) 
+          var playbut = body.slice(10)
+          const gold = await get.get(`https://api.zeks.xyz/api/gplaybutton?text=${playbut}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, gold.result, 'gold.jpg','Nihh', id)
+    break
+    case prefix+'silverplay':
+          await rahmat.reply(self, mess.wait, id) 
+          var playbut = body.slice(11)
+          const silver = await get.get(`http://api.zeks.xyz/api/splaybutton?text=${playbut}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, silver.result, 'silver.jpg','Nihh', id)
+    break
+     case prefix+'graffity':
+          await rahmat.reply(self, mess.wait, id) 
+          var graffity = body.slice(10)
+          const grafiti = await get.get(`http://api.zeks.xyz/api/grafiti?text=${graffity}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, grafiti.result, 'grafiti.jpg','Nihh', id)
+          break
+     case prefix+'leaves':
+          await rahmat.reply(self, mess.wait, id) 
+          var leaves1 = body.slice(8)
+          const leaves2 = await get.get(`http://api.zeks.xyz/api/leavest?text=${leaves1}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, leaves2.result, 'leaves2.jpg','Nihh', id)
+          break
+        case prefix+'tlight':
+          await rahmat.reply(self, mess.wait, id) 
+          var tlight1 = body.slice(8)
+          const tlight2 = await get.get(`http://api.zeks.xyz/api/tlight?text=${tlight1}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, tlight2.result, 'tlight2.jpg','Nihh', id)
+          break
+        case prefix+'crismes':
+          await rahmat.reply(self, mess.wait, id) 
+          var crismes1 = body.slice(8)
+          const crismes2 = await get.get(`http://api.zeks.xyz/api/crismes?text=${crismes1}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, crismes2.result, 'crismes2.jpg','Nihh', id)
+          break
+         case prefix+'goldplay':
+          await rahmat.reply(self, mess.wait, id) 
+          var playbut = body.slice(10)
+          const gold = await get.get(`https://api.zeks.xyz/api/gplaybutton?text=${playbut}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, gold.result, 'gold.jpg','Nihh', id)
+    break
+    case prefix+'silverplay':
+          await rahmat.reply(self, mess.wait, id) 
+          var playbut = body.slice(11)
+          const silver = await get.get(`http://api.zeks.xyz/api/splaybutton?text=${playbut}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, silver.result, 'silver.jpg','Nihh', id)
+    break
+     case prefix+'graffity':
+          await rahmat.reply(self, mess.wait, id) 
+          var graffity = body.slice(10)
+          const grafiti = await get.get(`http://api.zeks.xyz/api/grafiti?text=${graffity}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, grafiti.result, 'grafiti.jpg','Nihh', id)
+          break
+     case prefix+'leaves':
+          await rahmat.reply(self, mess.wait, id) 
+          var leaves1 = body.slice(8)
+          const leaves2 = await get.get(`http://api.zeks.xyz/api/leavest?text=${leaves1}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, leaves2.result, 'leaves2.jpg','Nihh', id)
+          break
+        case prefix+'tlight':
+          await rahmat.reply(self, mess.wait, id) 
+          var tlight1 = body.slice(8)
+          const tlight2 = await get.get(`http://api.zeks.xyz/api/tlight?text=${tlight1}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, tlight2.result, 'tlight2.jpg','Nihh', id)
+          break
+        case prefix+'crismes':
+          await rahmat.reply(self, mess.wait, id) 
+          var crismes1 = body.slice(8)
+          const crismes2 = await get.get(`http://api.zeks.xyz/api/crismes?text=${crismes1}&apikey=apivinz`).json()
+          rahmat.sendFileFromUrl(self, crismes2.result, 'crismes2.jpg','Nihh', id)
+          break
         case `${prefix}loli`:
         if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
             if (!isGroupMsg) return zama.reply(self, `Perintah ini hanya bisa di gunakan dalam group!`, id)
