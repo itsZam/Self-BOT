@@ -1,2 +1,2 @@
 # THANKS TO
-- https://github.com/TobyG74
+- [TOBZ](https://github.com/TobyG74)
