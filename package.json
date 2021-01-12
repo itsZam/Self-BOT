@@ -1,0 +1,85 @@
+{
+  "name": "ZAMBOT",
+  "version": "10.0.0",
+  "description": "THX FOR MHANKBARBAR AS MY FRIEND, REEDIT BY TOBZ > THEN ZAM",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZAMA",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@open-wa/wa-automate": "^3.1.12",
+    "@open-wa/wa-decrypt": "^2.0.1",
+    "automate": "0.0.3",
+    "axios": "^0.19.2",
+    "bent": "^7.3.10",
+    "brainly-scraper": "^1.0.2",
+    "canvacord": "^5.0.8",
+    "canvas": "^2.6.1",
+    "dotenv": "^8.2.0",
+    "download-file": "^0.1.5",
+    "emoji-regex": "^9.0.0",
+    "emoji-unicode": "^2.0.1",
+    "ffmpeg": "0.0.4",
+    "figlet": "^1.5.0",
+    "file-type": "^15.0.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs-extra": "^9.0.1",
+    "get-youtube-id": "^1.0.1",
+    "google-it": "^1.5.0",
+    "google-translate-open-api": "^1.3.5",
+    "got": "^11.7.0",
+    "gtts": "^0.2.1",
+    "image-size": "^0.9.1",
+    "image-to-base64": "^2.1.1",
+    "image-to-pdf": "^1.0.0",
+    "mathjs": "^8.1.1",
+    "moment-timezone": "^0.5.31",
+    "mysql": "^2.18.1",
+    "nana-api": "^1.1.2",
+    "needle": "^2.5.2",
+    "nhentai-api": "^3.0.2",
+    "nhentai-js": "^4.0.0",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.1",
+    "node-gtts": "^2.0.2",
+    "performance-now": "^2.1.0",
+    "pm2": "^4.5.1",
+    "remove.bg": "^1.3.0",
+    "request": "^2.88.2",
+    "text2png": "^2.3.0",
+    "translatte": "^2.5.8",
+    "video-crop": "^1.1.0",
+    "video-crop-cli": "^1.1.0",
+    "video-url-link": "^0.1.4",
+    "wa": "^0.1.3",
+    "ytdl": "^1.3.5",
+    "ytdl-core": "^4.4.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^5.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobyG74/ElainaBOT",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.9.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "keywords": [
+    "Whatsapp-Bot"
+  ],
+  "bugs": {
+    "url": "https://github.com/TobyG74/issues"
+  },
+  "homepage": "https://github.com/TobyG74/"
+}
