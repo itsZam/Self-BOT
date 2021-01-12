@@ -8,3 +8,15 @@
 - [BARBARKEY](https://mhankbarbars.herokuapp.com/api)
 - [MELODIC](https://melodicxt.herokuapp.com/api)
 - [TOBZAPI](https://tobz-api.herokuapp.com/)
+
+# RUN PROJECT
+- cd C:/Self-BOT-main
+- npm install
+- npm start
+
+# INFORMATION
+
+- use Node JS v14
+- install python + add path
+- install imagemagick ceklis 1,2,3,5,6
+- path ffmpeg
