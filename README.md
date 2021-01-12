@@ -20,3 +20,5 @@
 - install python + add path
 - install imagemagick ceklis 1,2,3,5,6
 - path ffmpeg
+
+- [DISKUSI BOT](https://chat.whatsapp.com/L5MJHVMsBcL56CdoKoFfkJ)
