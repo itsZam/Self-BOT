@@ -501,7 +501,7 @@ module.exports = zama = async (zama, message) => {
         const isregis = regisNumber.includes(sender.id)
         const isprem = premiumuser.includes(sender.id)
         const isregistered = regisNumber.includes(sender.id)
-        const ownerNumber = '6281295037142@c.us'
+        const ownerNumber = '6281295037142@c.us' //GANTI NOMOR LU
         const isOwner = ownerNumber.includes(sender.id)
         const isAdminban = adminbanNumber.includes(sender.id)
         const nma = pushname
