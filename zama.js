@@ -1682,10 +1682,12 @@ ${desc}`)
             break
         //by: github.com/iris
         case prefix+'fox':
+            if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
             const fox = await axios.get(`https://some-random-api.ml/img/fox`)
             await zama.sendFileFromUrl(self, fox.data.link, ``, 'Nihh', id)
             break
          case prefix+'nasa':
+            if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
             const nasa = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
             console.log(nasa.data)
             await zama.sendFileFromUrl(self, `${nasa.data.url}`, '', `Title: ${nasa.data.title}\n\nData: ${nasa.data.date}\n\nAutor: ${nasa.data.copyright}\n\nMateria: ${nasa.data.explanation}`, id)
@@ -1695,28 +1697,32 @@ ${desc}`)
             break
         case prefix+'morte':
         case prefix+'death':
-            if (args.length === 1) return rahmat.reply(self, 'Cantumkan nama, hanya satu, tanpa nama belakang atau nama lengkap, khusus untuk keselamatan Anda!', id)
+            if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
+            if (args.length === 1) return zama.reply(self, 'Cantumkan nama, hanya satu, tanpa nama belakang atau nama lengkap, khusus untuk keselamatan Anda!', id)
             const predea = await axios.get(`https://api.agify.io/?name=${args[1]}`)
             await zama.reply(self, `Orang dengan nama ini  "${predea.data.name}" cenderung meninggal pada usia ${predea.data.age} tahun.`, id)
             break
         case prefix+'gender':
         case prefix+'genero':
-            if (args.length === 1) return rahmat.reply(self, 'Coloque um nome, apenas um, nada de sobrenome ou nomes inteiros, ainda mais por sua segurança!', id)
+            if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
+            if (args.length === 1) return zama.reply(self, 'Coloque um nome, apenas um, nada de sobrenome ou nomes inteiros, ainda mais por sua segurança!', id)
             const seanl = await axios.get(`https://api.genderize.io/?name=${args[1]}`)
             const gender = seanl.data.gender.replace('female', 'mulheres').replace('male', 'homens')
             await zama.reply(self, `Name "${seanl.data.name}" lebih digunakan oleh: ${gender}.`, id)
             break
          //buat yg ga work block nya
          case prefix+'blokdia':
+            if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
             if (!isOwner) return await zama.reply(self, `Perintah ini hanya bisa digunakan oleh owner bot`, id)
             for (let blost of mentionedJidList) {
                     banned.push(blost)
                     fs.writeFileSync('./lib/database/blokir.json', JSON.stringify(ban)) //buat file lib/database/blokir.json 
                 await zama.contactBlock(mentionedJidList)
                 }
-                await rahmat.reply(self, `Success blokir target!`, id)
+                await zama.reply(self, `Success blokir target!`, id)
             break
         case prefix+'unblokdia':
+            if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
             if (!isOwner) return await zama.reply(self, `Perintah ini hanya bisa digunakan oleh owner bot`, id)
             for (let blost of mentionedJidList) {
                 unbanned.push(blost)
@@ -1726,6 +1732,7 @@ ${desc}`)
                 await zama.reply(self, `Success unblokir target!`, id)
             break
         case prefix+'buatgroup':
+            if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
         if (!isOwner) return zama.reply(self, 'Perintah ini hanya bisa di gunakan oleh Owner Rahmat!', id)
             argz = body.trim().split('|')
             const gcname = argz[1]
