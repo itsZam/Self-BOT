@@ -777,14 +777,22 @@ module.exports = zama = async (zama, message) => {
                         zama.reply(self, `Bot telah di unmute!`, id)
                     }
                 }
-                if (body === `${prefix}publicc`) {
+                if (body === `${prefix}public`) {
+                    if (!isOwner) return zama.reply(self, 'Maaf, perintah ini hanya dapat dilakukan oleh Owner ZAM!', id)
+                    if(setting.banChats === false) return
+                    setting.banChats = false
+                    banChats = false
+                    fs.writeFileSync('./lib/database/setting.json', JSON.stringify(setting, null, 2))
+                    zama.reply(self, ' _*MODE PUBLIC!*_ ', id)
+                }
+                /*if (body === `${prefix}publicc`) {
                     if (!isOwner) return zama.reply(self, `Maaf, perintah ini hanya dapat dilakukan oleh Owner Zam!`, id)
                     if(setting.banChats === false) return
                     setting.banChats = false
                     banChats = false
                     fs.writeFileSync('./lib/database/setting.json', JSON.stringify(setting, null, 2))
                     zama.reply('Global chat has been disable!')
-                }
+                }*/
 
         // [BETA] Avoid Spam Message
        // if (isCmd && isFiltered(from) && !isGroupMsg) { return console.log(color('[SPAM]', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname)) }
@@ -798,15 +806,14 @@ module.exports = zama = async (zama, message) => {
         if (isMuted(chatId) && banChat() && !isBlocked && !isBanned || isOwner ) {
         switch(command) {
 
-        case `${prefix}private`:
-        if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
-            if (setting.banChats === true) return
-            if (!isOwner) return zama.reply(self, `Perintah ini hanya bisa di gunakan oleh Owner Zam!`, id)
-            setting.banChats = true
-            banChats = true
-            fs.writeFileSync('./lib/database/setting.json', JSON.stringify(setting, null, 2))
-            zama.reply(self, `beralih ke mode private`, id)
-            break
+        case `${prefix}self`:
+          if (setting.banChats === true) return
+          if (!isOwner) return zama.reply(self, 'Perintah ini hanya bisa di gunakan oleh Owner ZAM!', id)
+          setting.banChats = true
+          banChats = true
+          fs.writeFileSync('./lib/database/setting.json', JSON.stringify(setting, null, 2))
+          zama.reply(self, '  _*MODE SELF!*_ ', id)
+          break
 
         case `${prefix}unmute`:
         if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
