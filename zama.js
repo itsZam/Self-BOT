@@ -1462,8 +1462,8 @@ ${desc}`)
                 //if (!isVipUser) return zama.reply(self, '*Fitur Ini Khusus VIP!*\n _Daftar VIP Hanya 10k/Bulan_\n\n*Mau Daftar VIP?*\nChat Owner BOT\n_wa.me/6285811955968 ', id)
             //if (!isGroupMsg) return zama.reply(self, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return zama.reply(self, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis/nJika Ingin Isi Ulang Chat Owner!/nKetik %limit Untuk Mengecek Kuota Limit Kamu`, id)
-            const loli = fs.readFileSync('./lib/loli.json')
-            const loliJson = JSON.parse(loli)
+            const loli2 = fs.readFileSync('./lib/loli.json')
+            const loliJson = JSON.parse(loli2)
             const loliIndex = Math.floor(Math.random() * loliJson.length)
             const loliKey = loliJson[loliIndex]
             zama.sendFileFromUrl(self, loliKey.image, 'loli.jpg', loliKey.teks)
@@ -4017,9 +4017,9 @@ ${desc}`)
         case `${prefix}phlogo`:
         if (!isregis) return zama.reply(self, `Nomor anda belum terverifikasi\nKetik @verify untuk memverifikasi`, id)
              if (!isGroupMsg) return zama.reply(self, `Perintah ini hanya bisa di gunakan dalam group!`, id)
-            const ph = body.slice(8)
-                const ph1 = ph.split('-')[0]
-                const ph2 = ph.split('-')[1]
+            const php = body.slice(8)
+                const ph1 = php.split('-')[0]
+                const ph2 = php.split('-')[1]
              zama.sendText(self, `_Sedang diproses, mohon tunggu sebentar!..._`, id)
              await zama.sendFileFromUrl(self, `https://api.vhtear.com/pornlogo?text1=${ph1}&text2=${ph2}&apikey=${vhtearkey}`,'pornhub.jpg',`Nih kak ${nma} udah jadi`, id)
              break
