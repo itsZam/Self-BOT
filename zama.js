@@ -1404,12 +1404,12 @@ ${desc}`)
           const tlight2 = await axios.get(`http://api.zeks.xyz/api/tlight?text=${tlight1}&apikey=apivinz`).json()
           zama.sendFileFromUrl(self, tlight2.result, 'tlight2.jpg','Nihh', id)
           break
-        case `${prefix}crismes`:
+        /*case `${prefix}crismes`:
           await zama.reply(self, mess.wait, id) 
           var crismes1 = body.slice(8)
           const crismes2 = await axios.get(`http://api.zeks.xyz/api/crismes?text=${crismes1}&apikey=apivinz`).json()
           zama.sendFileFromUrl(self, crismes2.result, 'crismes2.jpg','Nihh', id)
-          break
+          break*/
          case `${prefix}stickerhentai`: //lupa dari siapa
             case `${prefix}shentai`:  
             case `${prefix}stikerhentai`:
